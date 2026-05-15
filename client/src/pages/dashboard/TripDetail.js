@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
+import { toast } from "react-toastify";
 import {
   Box,
   Typography,
@@ -865,11 +866,17 @@ const TripDetail = () => {
       </Dialog>
 
       {/* Share Trip Dialog */}
-      <Dialog open={shareOpen} onClose={() => setShareOpen(false)} maxWidth="sm" fullWidth>
+      <Dialog
+        open={shareOpen}
+        onClose={() => setShareOpen(false)}
+        maxWidth="sm"
+        fullWidth
+      >
         <DialogTitle>Share Trip 🔗</DialogTitle>
         <DialogContent>
           <DialogContentText sx={{ mb: 2 }}>
-            Anyone with this link can view your trip to <strong>{currentTrip.destination}</strong> (read-only).
+            Anyone with this link can view your trip to{" "}
+            <strong>{currentTrip.destination}</strong> (read-only).
           </DialogContentText>
           <TextField
             fullWidth
@@ -891,7 +898,6 @@ const TripDetail = () => {
           </Button>
         </DialogActions>
       </Dialog>
-
     </Box>
   );
 };
