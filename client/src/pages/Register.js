@@ -142,7 +142,7 @@ const Register = () => {
         email: formData.email,
         password: formData.password,
       };
-      dispatch(register(payload));
+      dispatch(register(payload, navigate));
     } else {
       handleNext();
     }
