@@ -17,7 +17,6 @@ import {
   Stepper,
   Step,
   StepLabel,
-  Grid,
   FormControlLabel,
   Checkbox,
 } from "@mui/material";
